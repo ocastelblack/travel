@@ -1,0 +1,44 @@
+﻿@model List<Libro>
+
+<h1>Lista de libros</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Título</th>
+            <th>Editorial</th>
+            <th>Sinopsis</th>
+            <th>Número de páginas</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var libro in Model)
+        {
+            <tr>
+                <td>@libro.ISBN</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.Editorial.Nombre</td>
+                <td>@libro.Sinopsis</td>
+                <td>@libro.NPaginas</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>

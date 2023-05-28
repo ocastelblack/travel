@@ -1,0 +1,32 @@
+﻿@model Libro
+
+<h1>Detalles del libro</h1>
+
+<div class="details-container">
+    <h4>ISBN: @Model.ISBN</h4>
+    <h4>Título: @Model.Titulo</h4>
+    <h4>Editorial: @Model.Editorial.Nombre</h4>
+    <h4>Sinopsis:</h4>
+    <p>@Model.Sinopsis</p>
+    <h4>Número de páginas: @Model.NPaginas</h4>
+</div>
+
+<style>
+    .details-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+</style>
